@@ -87,3 +87,21 @@ div[id^="link"] {
     border : 2px solid black;
     border-radius: 15%;    
 }
+
+#personalarea {
+    display : grid;
+    justify-content: center;
+    align-items : center;
+}
+
+.L4graph2x2 {
+    display : grid;
+    grid-template-rows : 200px 200px;
+    grid-template-columns : 200px 200px;
+    gap : 10px;
+
+}
+.L4graph2x2 img {
+    width : 200px;
+    height : 200px;
+}
