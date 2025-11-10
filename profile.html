@@ -7,18 +7,18 @@
     </head>
     <body>
         <header>
-            <h1 id="firsttitle"> MMH 的個人首頁 </h1>
-            <br>
-            <div id="browse">
+            <nav id="browse">
                 <button style = "background-color:red;" onclick = "location.href='#basicinformation'">基本資料</button>
                 <button style = "background-color:yellow;color:black;" onclick = "location.href='#simpleint'">簡單自介</button>
                 <button style = "background-color:green;" onclick = "location.href='#eachlink'">各種連結</button>
                 <button style = "background-color:blue;" onclick = "location.href='#navpersonalarea'">個人專區</button>
-            </div>
-            <br>
+            </nav>
         </header>
         <main>
             <div id = "basicinformation">
+                <br>
+                <br>
+                <br>
                 <h2>基本資料 : </h2>
                 <div id="basicform">
                     <table border="0">
@@ -162,8 +162,25 @@
                         </td>
                     </tr>
                 </table>
-                <br>                
+                <br>      
+                <p class="personalgraph">
+                    Scratch 模擬賽馬場
+                </p>
+                <table border="0">
+                    <tr>
+                        <td class = "personaltd">
+                            <video src="./Scratch 賽馬場.MOV" style = "width : 450px;height : 380px;" controls="controls" autoplay="autoplay"></video>
+                        </td>
+                        <td class = "personaltd" style="border : 4px solid rgb(6, 225, 97);padding : 8px;">
+                            這是我在 2023 年年底的時候用 Scratch 完成的賽馬場程式。當初因為我對賽馬比賽預測與結果有興趣，因此我就寫了賽馬場這份程式。程式主要是模擬五匹馬以不同且隨時間變化的速度跑向終點，第一個到的那匹馬獲勝。
+                            <br>
+                            可惜的是因為過了很久所以檔案不見了。所以無法上傳 GitHub，也無法再次存取檔案。我認為可以改進的地方是可增加更多匹馬，能讓畫面更有趣且預測的選擇更多樣化。也可以讓地圖隨著馬跑起來而移動，這樣才更能製造出馬奔跑的效果。目前預計找個時間用 HTML 再寫一次，並完成更多的功能。
+                        </td>
+                    </tr>
+                </table>
+                <br>            
             </div>
+            <button id="back" onclick = "location.href = '#basicinformation'">🏠</button>
             <br>
             <br>
         </main>

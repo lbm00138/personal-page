@@ -2,11 +2,6 @@ body {
     background-color: lightblue;
 }
 
-#firsttitle {
-    font-size : 60px;
-    text-align : center;
-}
-
 h2 { 
     font-size : 40px;
 }
@@ -16,6 +11,10 @@ h2 {
     justify-content : center;
     align-items : center;
     gap : 50px;
+    position : fixed;
+    top : 0px;
+    width: 100vw;
+    height : 60px;
 }
 
 #browse button {
@@ -24,7 +23,15 @@ h2 {
     width : 120px;
     height : 50px;
     border : 2px solid black;
-    border-radius: 15%;
+    border-radius: 15%; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#browse button:hover {
+    font-size : 33px;
+    width : 160px;
+    height : 65px;
 }
 
 #basicinformation td p{
@@ -59,6 +66,14 @@ div[id^="link"] button {
     height : 50px;
     border : 2px solid black;
     border-radius: 15%;
+    cursor: pointer; 
+    transition: all 0.3s ease;
+}
+
+div[id^="link"] button:hover {
+    font-size : calc(25px * 4/3);
+    width : calc(150px * 4/3);
+    height : calc(50px * 4/3);    
 }
 
 div[id^="link"] {
@@ -86,6 +101,14 @@ div[id^="link"] {
     height : 40px;
     border : 2px solid black;
     border-radius: 15%;    
+    transition : all 0.3s ease;
+    cursor: pointer;
+}
+
+.personalbutton:hover {
+    font-size: calc(20px * 4/3);
+    width: calc(150px * 4/3);
+    height: calc(40px * 4/3);
 }
 
 #personalarea {
@@ -104,4 +127,25 @@ div[id^="link"] {
 .L4graph2x2 img {
     width : 200px;
     height : 200px;
+}
+
+#back {
+    position: fixed;
+    right: 35px;
+    bottom : 35px;
+    width : 70px;
+    height : 70px;
+    font-size : 30px;
+    background-color: rgb(239, 38, 219);
+    text-align : center;
+    border : 2px solid rgb(239, 38, 219);
+    border-radius : 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#back:hover {
+    font-size : calc(30px * 4/3);
+    width : calc(70px * 4/3);
+    height : calc(70px * 4/3);     
 }
