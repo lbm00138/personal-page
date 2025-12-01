@@ -253,6 +253,17 @@ img:hover {
     transform:scaleX(1.2) scaleY(1.2);
 }
 
+#mainimg {
+    width : 480px;
+    height : 480px;
+    animation-name: object;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-direction:normal;
+    animation-iteration-count:infinite;
+}
+
+
 form {
     display: grid;
     justify-content:center;
@@ -286,5 +297,32 @@ button[type="submit"]{
 }
 
 button[type="submit"]:hover{
+    cursor:pointer;
+}
+
+#searchindex {
+    display: flex;
+    justify-content:center;
+    gap:20px;
+}
+
+#searchinput {
+    font-size: 25px;
+    width:80vw;
+}
+
+#searchinput:hover {
+    cursor:text;
+}
+
+#searchbtn {
+    font-size: 25px;
+    background-color: black;
+    border-radius:10%;
+    width:50px;
+    height:50px;
+}
+
+#searchbtn:hover {
     cursor:pointer;
 }
