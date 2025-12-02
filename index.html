@@ -9,15 +9,15 @@
     <body>
         <header>
             <nav id="browse">
-                <button style = "background-color:red;" onclick = "location.href='#basicinformation'">基本資料</button>
-                <button style = "background-color:yellow;color:black;" onclick = "location.href='#simpleint'">簡單自介</button>
-                <button style = "background-color:green;" onclick = "location.href='#eachlink'">各種連結</button>
-                <button style = "background-color:blue;" onclick = "location.href='#navpersonalarea'">個人專區</button>
-                <button style = "background-color:purple;" onclick = "location.href='#getintouch'">聯繫方式</button>
+                <button style = "background-color:red;" onclick = "location.href='#basicinformation'" class="navlink">基本資料</button>
+                <button style = "background-color:yellow;color:black;" onclick = "location.href='#simpleint'" class="navlink">簡單自介</button>
+                <button style = "background-color:green;" onclick = "location.href='#eachlink'" class="navlink">各種連結</button>
+                <button style = "background-color:blue;" onclick = "location.href='#personalarea'" class="navlink">個人專區</button>
+                <button style = "background-color:purple;" onclick = "location.href='#getintouch'" class="navlink">聯繫方式</button>
             </nav>
         </header>
         <main>
-            <div id = "basicinformation">
+            <section id = "basicinformation">
                 <br>
                 <br>
                 <br>
@@ -42,15 +42,15 @@
                     </table>
                 </div>
                 <br>
-            </div>
-            <div id = "simpleint">
+            </section>
+            <section id = "simpleint">
                 <h2>簡單自介 : </h2>
                 <p id = "introduce">
                     大家好，我是陽明交大資訊工程學系的大一生，我的特殊表現是 APCS 拿到 5-5，高中資訊奧林匹亞第 32 名。我的興趣是旅遊、打橋牌。我也很喜歡參加學校的社團活動 (包含清華大學的)。上大學後我的目標是每科都 All Pass 不被當。
                 </p>
                 <br>
-            </div>
-            <div id = "eachlink">
+            </section>
+            <section id = "eachlink">
                 <h2>各種連結 : </h2>
                 <div id="showlinks">
                     <div id="linkone">
@@ -75,20 +75,20 @@
                     </div>
                 </div>
                 <br>
-            </div>
-            <h2 style = "text-align:left;" id="navpersonalarea">個人專區 : </h2>
-            <div id = "personalarea">
+            </section>
+            <section id = "personalarea">
+                <h2 style = "text-align:left;" id="navpersonalarea">個人專區 : </h2>
                 <div id="searchindex">
                     <input id="searchinput" placeholder="請輸入想看的資訊">
                     <button id="searchbtn">🔎</button>
                 </div>
                 <div id="showpersonalarea"></div>
-            </div>
+            </section>
             <button id="back" onclick = "location.href = '#basicinformation'">🏠</button>
             <img src="./Snow.png" class="SNOW">
             <img src="./星星.png" id="star1">
             <img src="./星星.png" id="star2">
-            <div id = "getintouch">
+            <section id = "getintouch">
                 <h2>聯繫方式 : </h2>
                 <form action="https://formspree.io/f/xwpdyjvl" method="POST">
                     <input type="text" name="yourname" placeholder="請輸入你的姓名" required>
@@ -99,7 +99,7 @@
                     <br>
                     <button type="submit">發送</button>
                 </form>
-            </div>
+            </section>
             <br>
             <br>
         </main>

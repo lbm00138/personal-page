@@ -162,10 +162,35 @@ function Searchitems(){
 const Searchinput = document.getElementById("searchinput");
 const Searchbtn = document.getElementById("searchbtn");
 Searchbtn.addEventListener("click",Searchitems);
-Searchitems();
 
 Searchinput.addEventListener("keypress",(e) => {
     if (e.key == "Enter"){
         Searchitems();
     }
 })
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navlink");
+
+function NavToSection(){
+    let currentSection = "";
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 100) {
+            currentSection = section.getAttribute("id");
+        }        
+    });
+    navLinks.forEach(link => {
+        link.classList.remove("inthis");
+        const target = link.getAttribute("href") || (link.getAttribute("onclick") && link.getAttribute("onclick").match(/'#([^']+)'/)?.[1]);
+        if (target === currentSection) {
+            link.classList.add("inthis");
+        }
+    });
+}
+
+window.addEventListener("scroll", NavToSection);
+
+
+Searchitems();
+NavToSection();
