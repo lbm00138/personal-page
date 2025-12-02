@@ -9,15 +9,15 @@
     <body>
         <header>
             <nav id="browse">
-                <button style = "background-color:red;" onclick = "location.href='#basicinformation'">基本資料</button>
-                <button style = "background-color:yellow;color:black;" onclick = "location.href='#simpleint'">簡單自介</button>
-                <button style = "background-color:green;" onclick = "location.href='#eachlink'">各種連結</button>
-                <button style = "background-color:blue;" onclick = "location.href='#navpersonalarea'">個人專區</button>
-                <button style = "background-color:purple;" onclick = "location.href='#getintouch'">聯繫方式</button>
+                <button onclick = "location.href='#basicinformation'" class="navlink">基本資料</button>
+                <button onclick = "location.href='#simpleint'" class="navlink">簡單自介</button>
+                <button onclick = "location.href='#eachlink'" class="navlink">各種連結</button>
+                <button onclick = "location.href='#personalarea'" class="navlink">個人專區</button>
+                <button onclick = "location.href='#getintouch'" class="navlink">聯繫方式</button>
             </nav>
         </header>
         <main>
-            <div id = "basicinformation">
+            <section id = "basicinformation">
                 <br>
                 <br>
                 <br>
@@ -28,58 +28,76 @@
                             <td style = "width : 500px;height : 500px;">
                                 <img src = "./章魚.png" id="mainimg">
                             </td>
-                            <td style = "width : 40px;height : 500px;"></td>
-                            <td style = "width : 460px;height : 500px;" id="messagedata">
+                            <td style = "width : 120px;height : 560px;" rowspan="2"></td>
+                            <td style = "width : 460px;height : 560px;" id="messagedata" rowspan="2">
                                 <p>暱稱 : MMHMMHMMH</p>
                                 <p>性別 : 男</p>
                                 <p>生日 : 2006/10/06</p>
+                                <p>出生地 : 臺北市</p>
                                 <p>學校 : 國立陽明交通大學</p>
                                 <p>科系 : 資訊工程學系</p>
+                                <p>血型 : O 型</p>
+                                <p>MBTI : INTP</p>
+                                <p>星座 : 天秤座</p>
                                 <p>Instagram : @com101010101</p>
                                 <p>電話 : 0906672292</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style = "width : 500px;height : 60px;" id="typewriter">
+                                <p id="typewords"></p>
                             </td>
                         </tr>
                     </table>
                 </div>
                 <br>
-            </div>
-            <div id = "simpleint">
+            </section>
+            <section id = "simpleint">
                 <h2>簡單自介 : </h2>
                 <p id = "introduce">
                     大家好，我是陽明交大資訊工程學系的大一生，我的特殊表現是 APCS 拿到 5-5，高中資訊奧林匹亞第 32 名。我的興趣是旅遊、打橋牌。我也很喜歡參加學校的社團活動 (包含清華大學的)。上大學後我的目標是每科都 All Pass 不被當。
                 </p>
                 <br>
-            </div>
-            <div id = "eachlink">
+            </section>
+            <section id = "eachlink">
                 <h2>各種連結 : </h2>
-                <div id="linkone">
-                    <button style = "background-color:blue;" onclick = "location.href='https://www.facebook.com/xsiancydb/'">Facebook</button>
-                    <button style = "background-color:pink;color : black" onclick = "location.href='https://www.instagram.com/com101010101'">Instagram</button>
-                    <button style = "background-color:red;" onclick = "location.href='https://www.youtube.com/@Bisforbanana-e1f/videos'">Youtube</button>
-                    <button style = "background-color:black;" onclick = "location.href='https://www.threads.com/@com101010101'">Thread</button>
+                <div id="showlinks">
+                    <div id="linkone">
+                        <button style = "background-color:blue;" onclick = "location.href='https://www.facebook.com/xsiancydb/'">Facebook</button>
+                        <button style = "background-color:pink;color : black" onclick = "location.href='https://www.instagram.com/com101010101'">Instagram</button>
+                        <button style = "background-color:red;" onclick = "location.href='https://www.youtube.com/@Bisforbanana-e1f/videos'">Youtube</button>
+                        <button style = "background-color:black;" onclick = "location.href='https://www.threads.com/@com101010101'">Thread</button>
+                        <button style = "background-color:yellow;color : black" onclick = "location.href='https://hackmd.io/@-NK1yL0aSQS4GGo6S9IfeQ'">Hackmd</button>
+                        <button style = "background-color:green" onclick = "location.href='https://codeforces.com/profile/MMHMMHMMH'">Codeforces</button>
+                        <button style = "background-color:purple" onclick = "location.href='https://portaly.cc/mmhover'">Portaly</button>
+                        <button style = "background-color:black;" onclick = "location.href='https://github.com/lbm00138'">GitHub</button>
+                    </div>
+                    <div id="linktwo">
+                        <button style = "background-color:blue;" onclick = "location.href='https://www.facebook.com/xsiancydb/'">Facebook</button>
+                        <button style = "background-color:pink;color : black" onclick = "location.href='https://www.instagram.com/com101010101'">Instagram</button>
+                        <button style = "background-color:red;" onclick = "location.href='https://www.youtube.com/@Bisforbanana-e1f/videos'">Youtube</button>
+                        <button style = "background-color:black;" onclick = "location.href='https://www.threads.com/@com101010101'">Thread</button>
+                        <button style = "background-color:yellow;color : black" onclick = "location.href='https://hackmd.io/@-NK1yL0aSQS4GGo6S9IfeQ'">Hackmd</button>
+                        <button style = "background-color:green" onclick = "location.href='https://codeforces.com/profile/MMHMMHMMH'">Codeforces</button>
+                        <button style = "background-color:purple" onclick = "location.href='https://portaly.cc/mmhover'">Portaly</button>
+                        <button style = "background-color:black;" onclick = "location.href='https://github.com/lbm00138'">GitHub</button>
+                    </div>
                 </div>
                 <br>
-                <div id="linktwo">
-                    <button style = "background-color:yellow;color : black" onclick = "location.href='https://hackmd.io/@-NK1yL0aSQS4GGo6S9IfeQ'">Hackmd</button>
-                    <button style = "background-color:green" onclick = "location.href='https://codeforces.com/profile/MMHMMHMMH'">Codeforces</button>
-                    <button style = "background-color:purple" onclick = "location.href='https://portaly.cc/mmhover'">Portaly</button>
-                    <button style = "background-color:black;" onclick = "location.href='https://github.com/lbm00138'">GitHub</button>
-                </div>
-                <br>
-            </div>
-            <h2 style = "text-align:left;" id="navpersonalarea">個人專區 : </h2>
-            <div id = "personalarea">
+            </section>
+            <section id = "personalarea">
+                <h2 style = "text-align:left;" id="navpersonalarea">個人專區 : </h2>
                 <div id="searchindex">
                     <input id="searchinput" placeholder="請輸入想看的資訊">
                     <button id="searchbtn">🔎</button>
                 </div>
                 <div id="showpersonalarea"></div>
-            </div>
+            </section>
             <button id="back" onclick = "location.href = '#basicinformation'">🏠</button>
             <img src="./Snow.png" class="SNOW">
             <img src="./星星.png" id="star1">
             <img src="./星星.png" id="star2">
-            <div id = "getintouch">
+            <section id = "getintouch">
                 <h2>聯繫方式 : </h2>
                 <form action="https://formspree.io/f/xwpdyjvl" method="POST">
                     <input type="text" name="yourname" placeholder="請輸入你的姓名" required>
@@ -90,10 +108,11 @@
                     <br>
                     <button type="submit">發送</button>
                 </form>
-            </div>
+            </section>
             <br>
             <br>
         </main>
+        <progress id="sidebar" max="100" value="0"></progress>
         <script src="./script.js"></script>
     </body>
 </html>
