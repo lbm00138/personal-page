@@ -148,6 +148,54 @@ const personalarray = {"終極井字遊戲" :
 `
 }
 
+const TypeByOrder = ["最喜歡的食物 : 冰炫風","最喜歡的動物 : 章魚","最喜歡的歌曲 : 群青","最喜歡的桌遊 : 駭浪求生","興趣 : 打橋牌","最喜歡的遊戲 : 菇勇者傳說","高中就讀 : 臺北市立成淵高中","最討厭的食物 : 香菇","最討厭的動物 : 壁虎","遊戲都玩不贏的原因 : 沒有課金"]
+let wordsindex = 0;
+let IsDelete = false;
+Typewords = document.getElementById("typewords");
+
+function typeWriterExe(){
+    const CurrentText = TypeByOrder[wordsindex];
+    const TypingSpeed = 100; 
+    const DeletingSpeed = 50; 
+    const PauseAfterTyping = 2000;
+    const PauseAfterDeleting = 600;    
+    if (!IsDelete){
+        let charindex = 0;
+        Typewords.textContent = '';
+        const typing = setInterval(() =>{
+            Typewords.textContent += CurrentText[charindex];
+            charindex++;
+            if (charindex === CurrentText.length) { 
+                clearInterval(typing);
+                setTimeout(() => {
+                    IsDelete = true;
+                    typeWriterExe();
+                },PauseAfterTyping);
+            }
+        },TypingSpeed);
+    }
+    else {
+        let charindex = CurrentText.length;
+        const deleting = setInterval(() => {
+            Typewords.textContent = CurrentText.substring(0, charindex - 1);
+            charindex--;            
+            if (charindex === 0) {
+                clearInterval(deleting);
+                IsDelete = false;
+                wordsindex = (wordsindex + 1) % TypeByOrder.length;
+                setTimeout(() => {
+                    typeWriterExe();
+                }, PauseAfterDeleting);
+            }
+        }, DeletingSpeed);
+    }
+}
+
+
+
+
+
+
 function Searchitems(){
     const keyword = Searchinput.value;
     const SearchPersonalArray = [];
@@ -211,3 +259,4 @@ window.addEventListener("scroll", function (){
 
 Searchitems();
 NavToSection();
+typeWriterExe();
