@@ -68,20 +68,41 @@ h2 {
     
 }
 
+.navlink:nth-child(1){
+    background-color:red;
+}
+
 .navlink.inthis:nth-child(1) {
     box-shadow: 5px 5px 5px red;
+}
+
+.navlink:nth-child(2){
+    background-color:yellow;
+    color:black;
 }
 
 .navlink.inthis:nth-child(2) {
     box-shadow: 5px 5px 5px yellow;
 }
 
+.navlink:nth-child(3){
+    background-color:green;
+}
+
 .navlink.inthis:nth-child(3) {
     box-shadow: 5px 5px 5px green;
 }
 
+.navlink:nth-child(4){
+    background-color:blue;
+}
+
 .navlink.inthis:nth-child(4) {
     box-shadow: 5px 5px 5px blue;
+}
+
+.navlink:nth-child(5){
+    background-color:purple;
 }
 
 .navlink.inthis:nth-child(5) {
@@ -367,4 +388,24 @@ button[type="submit"]:hover{
 
 #searchbtn:hover {
     cursor:pointer;
+}
+
+#sidebar {
+    position:fixed;
+    bottom:15px;
+    left:90px;   
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#sidebar::-webkit-progress-bar{
+    width:150px;
+    height:7px;
+    border-radius:3.5px;
+}
+
+#sidebar::-webkit-progress-value {
+    border-radius: 3.5px;
+    background-color: yellow;
 }

@@ -189,8 +189,25 @@ function NavToSection(){
     });
 }
 
-window.addEventListener("scroll", NavToSection);
+function ProgressBar(){
+    const SideBar = document.getElementById("sidebar");
+    const PreHeight = window.scrollY;
+    const WindowHeight = Math.max(
+        document.body.scrollHeight, 
+        document.documentElement.scrollHeight,
+        document.body.offsetHeight, 
+        document.documentElement.offsetHeight,
+        document.body.clientHeight, 
+        document.documentElement.clientHeight
+    );
+    const Progress = PreHeight / (WindowHeight - window.innerHeight) * 100;
+    SideBar.value = Math.min(Progress,100);
+}
 
+window.addEventListener("scroll", function (){
+    NavToSection();
+    ProgressBar();
+});
 
 Searchitems();
 NavToSection();
